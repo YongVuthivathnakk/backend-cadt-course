@@ -1,0 +1,1 @@
+[{"_id":"participant1","_type":"swim","_duration":{"_totalSeconds":150}},{"_id":"participant1","_type":"run","_duration":{"_totalSeconds":105}},{"_id":"participant2","_type":"swim","_duration":{"_totalSeconds":195}}]

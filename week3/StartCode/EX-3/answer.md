@@ -2,7 +2,7 @@
 
 ## Q1 - What are the advantages of using middleware in an Express application?
 
-The advantage is that we can handle common task from our route logic which makes the route more organized and easier to maintain.
+The advantage is that we can handle common tasks separately from our route logic, which makes the route more organized and easier to maintain.
 
 ## Q2 - How does separating middleware into dedicated files improve the maintainability of your code?
 
@@ -10,18 +10,18 @@ It keeps the main server file smaller and easier to understand. Each middleware 
 
 ## Q3 - If you had to scale this API to support user roles (e.g., admin vs student), how would you modify the middleware structure?
 
-I would create authenthication and authorization middleware seperately.
-Authenthication verifies who the user is and authorization checks what the user is allowed to do.
+I would create authentication and authorization middleware separately.
+Authentication verifies who the user is, and authorization checks what the user is allowed to do.
 
 # Query Handling & Filtering
 
 ## Q4 - How would you handle cases where multiple query parameters conflict or are ambiguous (e.g., minCredits=4 and maxCredits=3)?
 
-I would create a seperate middleware to validate before filter the course.
+I would create a separate middleware to validate before filtering the course.
 
 ## Q5 - What would be a good strategy to make the course filtering more user-friendly (e.g., handling typos in query parameters like “falll” or “dr. smtih”)?
 
-To make it a good strategy I have to make the value to lower case, trimimg spaces, and possibly using fuzzy matching for things like instructor names.
+To make it a good strategy, I would convert the value to lowercase, trim spaces, and possibly use fuzzy matching for things like instructor names.
 
 # Security & Validation
 

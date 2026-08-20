@@ -6,9 +6,9 @@ Express makes these common backend tasks simpler and keeps the code more organiz
 
 ## Q2 – How does Express simplify route handling compared to the native HTTP server?
 
-It have `get` function for listen provided route rather that using if else conditions.
+It has a `get` function for listening to provided routes rather than using if-else conditions.
 
-With node js:
+With Node.js:
 ```js
 if (url === '/contact' && method === 'GET') {
     // ...
@@ -19,7 +19,7 @@ if (url === '/contact' && method === 'POST') {
 }
 ```
 
-With Express js:
+With Express.js:
 ```js
 app.get('/contact', (req, res) => {
     // ...

@@ -7,7 +7,9 @@ import {
 } from "../models/articleModel.js";
 
 export function getAllArticles(req, res) {
-  res.json(getArticles());
+  const { journalistId, categoryId } = req.query;
+  const articles = getArticles({ journalistId, categoryId });
+  res.json(articles);
 }
 
 export function getArticle(req, res) {
@@ -38,7 +40,13 @@ export function updateExistingArticle(req, res) {
 
   const { title, content, journalistId, categoryId } = req.body;
 
-  const article = updateArticle(articleId, title, content, journalistId, categoryId);
+  const article = updateArticle(
+    articleId,
+    title,
+    content,
+    journalistId,
+    categoryId,
+  );
   if (!article) {
     return res.status(404).json({
       error: "Article not found",

@@ -36,8 +36,17 @@ const articles = [
   },
 ];
 
-export function getArticles() {
-  return articles;
+export function getArticles(filters={}) {
+  let result = articles;
+  if(filters.journalistId) {
+    result = result.filter((article) => article.journalistId === Number(filters.journalistId))
+  }
+  if(filters.categoryId) {
+    result = result.filter((article) => article.categoryId === Number(filters.categoryId))
+  }
+
+  return result 
+
 }
 
 export function getArticleById(id) {

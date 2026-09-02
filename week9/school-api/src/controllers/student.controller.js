@@ -74,7 +74,7 @@ export const getAllStudents = async (req, res) => {
       meta: {
         page,
         limit,
-        total: total,
+        totalItems: total,
         totalPage: Math.ceil(total / limit),
       },
     });
